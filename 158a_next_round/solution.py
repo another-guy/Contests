@@ -9,5 +9,8 @@ def main():
     # Write result to output  
     sys.stdout.write(result + '\n')
 
+def f(x):
+    return x + 1
+
 if __name__ == '__main__':
     main()
