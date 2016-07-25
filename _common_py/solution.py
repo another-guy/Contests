@@ -3,7 +3,9 @@ import sys
 
 def main():
     # Read input
-    lines = []
+    l1 = sys.stdin.readline().strip()
+    l2 = sys.stdin.readline().strip()
+    lines = [ l1, l2 ]
 
     # Do work
     result = solve(lines)
