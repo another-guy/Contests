@@ -21,6 +21,12 @@ function charCountDoesNotExceed(hostCharCount: { [_: string]: number}, guestChar
     .every(char => hostCharCount[char] >= guestCharCount[char]);
 }
 
+/**
+ * Problem: Given two strings, write a method to decide whether one is the permutation of another.
+ * Solution:
+ *   complexity: O(n)
+ *   memory: O(k + m), where k and m are respectively counts of unique characters in each input word.
+ */
 function checkPermutation(hostWord: string, guestWord: string): boolean {
   return charCountDoesNotExceed(
     charCount(normalize(hostWord)),
@@ -35,5 +41,5 @@ function checkPermutation(hostWord: string, guestWord: string): boolean {
   ['abracadabra', 'Braza']
 ].forEach(testCase => {
   const [host, guest] = testCase;
-  console.warn(host, guest, checkPermutation(host, guest));
+  console.warn('checkPermutation', host, guest, checkPermutation(host, guest));
 });
