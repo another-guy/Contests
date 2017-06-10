@@ -1,23 +1,53 @@
-function inPlaceSort(characters: string[]): string[] {
-  return characters.sort();
+function swap<T>(data: T[], index1: number, index2: number): void {
+  const temporary = data[index1];
+  data[index1] = data[index2];
+  data[index2] = temporary;
+}
+
+function partition<T>(data: T[], low: number, high: number, less: (a: T, b: T) => boolean): number {
+  const pivotIndex = high;
+  const pivotValue = data[pivotIndex];
+  let insertIndex = low - 1;
+  for (let index = low; index < high; index++) {
+    if (less(data[index], pivotValue)) {
+      insertIndex++;
+      swap(data, index, insertIndex);
+    }
+  }
+  const newPivotIndex = insertIndex + 1;
+  swap(data, pivotIndex, newPivotIndex);
+  return newPivotIndex;
+}
+
+function quicksort<T>(data: T[], low: number = 0, high: number = data.length - 1, less: (a: T, b: T) => boolean): void {
+  if (low < high) {
+    const pivotIndex = partition(data, low, high, less);
+    quicksort(data, low, pivotIndex - 1, less);
+    quicksort(data, pivotIndex + 1, high, less);
+  }
+}
+
+function inPlaceSort<T>(data: T[], less: (a: T, b: T) => boolean): void {
+  return quicksort(data, 0, data.length - 1, less);
 }
 
 /**
  * Problem: Implement an algorithm to determine if a string has all unique characters.
  *    What if you cannot use additional data structures?
  * Solution:
- *   ...
+ *   complexity: O(n log n) -- bound by quicksort
+ *   memory: O(n)
  */
 function isUnique(word: string): boolean {
   const characters = word.split('');
-  const sortedCharacters = inPlaceSort(characters);
+  inPlaceSort(characters, (a, b) => a < b);
 
-  for (let index = 0; index < sortedCharacters.length - 1; index++)
-    if (sortedCharacters[index] === sortedCharacters[index + 1])
+  for (let index = 0; index < characters.length - 1; index++)
+    if (characters[index] === characters[index + 1])
       return false;
   
   return true;
 }
 
-[ 'a', 'ab', 'Aa', 'aa', 'abc' ]
+[ 'a', 'ab', 'Aa', 'aa', 'abc', 'aba', 'abA' ]
   .forEach(inputString => console.warn(inputString, 'isUnique', isUnique(inputString)));
