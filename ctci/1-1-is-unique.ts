@@ -49,5 +49,21 @@ function isUnique(word: string): boolean {
   return true;
 }
 
-[ 'a', 'ab', 'Aa', 'aa', 'abc', 'aba', 'abA' ]
-  .forEach(inputString => console.warn(inputString, 'isUnique', isUnique(inputString)));
+[
+  [ 'a', true ],
+  [ 'ab', true ],
+  [ 'Aa', true ],
+  [ 'aa', false ],
+  [ 'abc', true ],
+  [ 'aba', false ],
+  [ 'abA', true ]
+]
+  .forEach(testCase => {
+    const [ inputString, expectedResult ] = <[string, boolean]>testCase;
+    const actualResult = isUnique(inputString);
+    if (actualResult === expectedResult) {
+      console.info(inputString, actualResult ? 'unique' : 'not unique');
+    } else {
+      console.error(inputString, actualResult ? 'unique' : 'not unique');
+    }
+  });
