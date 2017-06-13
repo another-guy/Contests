@@ -1,0 +1,21 @@
+{
+  "name": "ctci",
+  "version": "0.0.1",
+  "description": "Solving 'Cracking the Coding Interview' in TypeScript.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/another-guy/Contests.git"
+  },
+  "keywords": [
+    "ctci"
+  ],
+  "author": "Igor Soloydenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/another-guy/Contests/issues"
+  },
+  "homepage": "https://github.com/another-guy/Contests#readme"
+}
