@@ -4,6 +4,8 @@
   "description": "Solving 'Cracking the Coding Interview' in TypeScript.",
   "main": "index.js",
   "scripts": {
+    "prepublish": "typings install",
+    "watch": "webpack --watch --display-error-details"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/another-guy/Contests/issues"
   },
-  "homepage": "https://github.com/another-guy/Contests#readme"
+  "homepage": "https://github.com/another-guy/Contests#readme",
+  "devDependencies": {
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.5.0-dev.20170613",
+    "typings": "^2.1.1",
+    "webpack": "^2.6.1"
+  }
 }
