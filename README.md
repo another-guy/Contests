@@ -9,18 +9,32 @@ There may be much more topics listed than it's practically achivable to iterate 
 
 ### Data Structures
 
-* String - a sequence of characters; or an array of bytes that represents such sequence.
-* Array - sequential data structure that stores elements of the same type and makes them accessible by index.
-* Linked list - linear collection of data elements, each containing a link to its successor (and predecessor).
-* Stack - ADT
-* Deck
-* Queue
-* Tree
-* [Hash]Map/Disctionary
-* [Hash]Set
-* Trie (Prefix tree)
-* Graph
-  * Adjacency Matrix vs Adjacency List based representations.
+* **String** - a sequence of characters; or an array of bytes that represents such sequence.
+* **Array** - sequential data structure that stores elements of the same type and makes them accessible by index.
+  * Access/write by index: `O(1)`.
+  * Resizing (drawback): takes `O(n)` and temporary requires extra space of `O(n)`.
+* **Linked list** + (**Doubly linked list/Deck**) - linear collection of data elements, each containing a link to its successor (and predecessor).
+  * Access by index: `O(n)`;
+  * Insert/delete at beginning: `O(1)`.
+  * Insert/delete at ending: `O(1)` if last element is known; otherwise `O(n)`.
+  * Insert/delete at arbitrary position: search time + `O(1)`.
+* **Stack** - ATD that implements a collection of elements with 2 principal operations: `push(element): void` and `pop(): element`. Often described as LIFO (last in, first out).
+  * Array vs Linked list based implementations.
+  * Both `push()` and `pop()` take `O(1)` time.
+* **Queue** - ATD that implements a collection of elements with 2 principal operations: `enqueue(element): void` and `dequeue(): element`. Often described as FIFO (first in, first out).
+  * `enqueue()`/`dequeue()` takes `O(1)`.
+  * Search takes `O(n)`, but it's not necessarily a typical operation.
+  * [ADVANCED] Priority Queue -- TODO
+* **Tree**
+  * TODO
+* **Trie (Prefix tree)**
+  * TODO
+* **[Hash]Map/Disctionary**
+  * TODO
+* **[Hash]Set**
+  * TODO
+* **Graph**
+  * Adjacency Matrix vs Adjacency List based implementations.
   * Directed and Undirected.
 
 ### Algorithms
