@@ -5,7 +5,23 @@ The Essentials are highlighted **in bold**.
 
 There may be much more topics listed than it's practically achivable to iterate over during the preparation period.
 
-## Algorithms
+## DATA STRUCTURES AND ALGORITHMS
+
+### Data Structures
+
+* Arrays
+* Strings
+* Linked lists
+* Stacks
+* Decks
+* Queues
+* Trees
+* Tries
+* Graphs
+  * Adjacency matrix based representation
+  * Adjacency list based representation
+
+### Algorithms
 
 * Array/list search
 * Array/list* sorting
@@ -13,7 +29,7 @@ There may be much more topics listed than it's practically achivable to iterate 
 * Graph traversal/search
 * Bitwise math ("tricks")
 
-## Strategies
+### Strategies
 
 * Divide and conquer
 * Greedy algorithms
@@ -21,7 +37,7 @@ There may be much more topics listed than it's practically achivable to iterate 
 * Dynamic programming
 * Heuristics
 
-## Approaches and Techniques
+### Approaches and Techniques
 
 * Find optimal structure for problem representation
   * Example: translate list into a graph, then apply search
@@ -31,6 +47,29 @@ There may be much more topics listed than it's practically achivable to iterate 
 * "Tricks"
   * Count items instead of sorting the collection
 
-## Theory
+### Theory
 
 * Big O notation
+* NP-hard problems
+
+## SOFTWARE DESIGN AND ARCHITECTURE
+
+### Empirical Principles
+
+* SOLID
+* DRY
+* KISS
+
+### Design Patterns
+
+#### GOF - Creational
+
+...
+
+#### GOF - Structural
+
+...
+
+#### GOF - Behavioral
+
+...
