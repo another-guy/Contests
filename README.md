@@ -56,15 +56,27 @@ There may be much more topics listed than it's practically achivable to iterate 
 
 ### Empirical Principles
 
-* SOLID
-* DRY
-* KISS
+* Architectural
+  * SOLID
+* General engineering
+  * DRY
+  * KISS
+  * YAGNI
 
 ### Design Patterns
 
 #### GOF - Creational
 
-...
+* Factory
+* Factory method
+* Builder
+* Fluid builder
+* Singleton
+
+  Considered an anti-pattern nowadays since:
+  1) introduces a globally exposed state available for [undesired] modification;
+  2) obfuscates relationships that exist in the system;
+  3) can be replaced with DI/IOC container that's setup to produce type(s) as singleton.
 
 #### GOF - Structural
 
@@ -84,3 +96,5 @@ There may be much more topics listed than it's practically achivable to iterate 
 
 * Development Principles and Approcahes
   * "Waterfall" vs Agile
+  
+  _Opinion_: Waterfall and Agile are not different in their nature. Thinking otherwise is a delusion. The key difference between these  two mothodologies is the **duration of the sprint**. In Agile sprints are usually 1 to 3 weeks long, in Waterfall they are months or even years.
