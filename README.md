@@ -73,3 +73,14 @@ There may be much more topics listed than it's practically achivable to iterate 
 #### GOF - Behavioral
 
 ...
+
+## OTHER
+
+* Multithreading / Concurrency
+
+* Scaling
+
+* Quality Assurance
+
+* Development Principles and Approcahes
+  * "Waterfall" vs Agile
