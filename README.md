@@ -7,6 +7,11 @@ There may be much more topics listed than it's practically achivable to iterate 
 
 ## DATA STRUCTURES AND ALGORITHMS
 
+### Theory
+
+* Big O notation
+* NP-hard problems
+
 ### Data Structures
 
 * **String** - a sequence of characters; or an array of bytes that represents such sequence.
@@ -24,9 +29,14 @@ There may be much more topics listed than it's practically achivable to iterate 
 * **Queue** - ATD that implements a collection of elements with 2 principal operations: `enqueue(element): void` and `dequeue(): element`. Often described as FIFO (first in, first out).
   * `enqueue()`/`dequeue()` takes `O(1)`.
   * Search takes `O(n)`, but it's not necessarily a typical operation.
-  * [ADVANCED] Priority Queue -- TODO
 * **Tree**
-  * TODO
+  * In **Binary Search Tree** both `insert()` and `search()` take `O(log n)`.
+  * Balanced Trees:
+    * `rotate()` operation is used in `insert()` and `delete()` to enforce the balance invariant.
+    * [ADVANCED] **Red-Black Tree**
+    * [ADVANCED] **AVL Tree**
+    * [ADVANCED] **Priority Queue**
+    * [ADVANCED] **Binary Heap**
 * **Trie (Prefix tree)**
   * TODO
 * **[Hash]Map/Disctionary**
@@ -36,10 +46,13 @@ There may be much more topics listed than it's practically achivable to iterate 
 * **Graph**
   * _Adjacency Matrix_ based implementation is space-inefficient but allows `O(1)` access to edges. By contrast, _Adjacency List_ based implementation is compact, but requires `O(n)` time to access edges, which may lead to performance degradation on large number of nodes and/or edges. Dictionary based implementation may be the most efficient space- and time-wise.
   * Directed and Undirected.
+  TODO
 
 ### Algorithms
 
 * Array/list search
+  * **Linear search** - `O(n)` in worst case in linked list.
+  * **Binary search** - `O(log n)` in worst case in **sorted** array.
   TODO
 * Array/list(*) sorting
   * **QuickSort** - `O(n^2)` in worst case, and `O(n log n)` in average case. In implementations where the pivot index is randomly selected, the algorithm is unstable*.
@@ -48,11 +61,14 @@ There may be much more topics listed than it's practically achivable to iterate 
   * Insertion, Selection, Bubblesort, and alike are `O(n^2)` in worst and often in average case, and therefore impractical.
   * More exotic, special case focused sortings include **count sort** and **bucket sorts**.
 * Tree traversal/search
-  * **BFS (breadth first search)**
-  * **DFS (depth first search)**
-  * **Topological sorting**
-  TODO
+  * **BFS -- breadth first search/traversal**.
+  * **DFS -- depth first search/traversal**.
+    * Pre-, in-, post-order traversal.
+  * **Topological sorting**.
+  * [ADVANCED] **Minimax**.
+  * [ADVANCED] **Alpha-beta prunnung**.
 * Graph traversal/search
+  * [ADVANCED] A* search.
   TODO
 * Bitwise math ("tricks")
   TODO
@@ -75,6 +91,7 @@ Key concepts and operations
 
 ### Strategies
 
+* Brute force
 * Divide and conquer
   * Recursion
 * Greedy algorithms
@@ -91,11 +108,6 @@ Key concepts and operations
   * Example: Pre-sort data, then apply [binary] search
 * "Tricks"
   * Count items instead of sorting the collection
-
-### Theory
-
-* Big O notation
-* NP-hard problems
 
 ## SOFTWARE DESIGN AND ARCHITECTURE
 
@@ -131,14 +143,23 @@ Key concepts and operations
 
 ...
 
+## Multithreading / Concurrency
+
+  * Optimistic vs pessimistic locking.
+  * Thread parallelism.
+    * TODO: `mutex` vs `semaphore` vs `lock` vs `monitor`.
+  * Task parallelism.
+  * Reactive programming.
+  * TODO `coroutines` vs `tasks` vs `threads` vs `reactive`
+  TODO
+
 ## OTHER
 
-* Multithreading / Concurrency
-
 * Scaling
-
+  * TODO [CAP Theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+  TODO
 * Quality Assurance
-
+  TODO
 * Development Principles and Approcahes
   * "Waterfall" vs Agile
   
