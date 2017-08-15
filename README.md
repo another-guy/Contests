@@ -1,4 +1,14 @@
-# List of Topics
+**TODO** Add links to code files for data types, algorithms, problems solved.
+
+**TODO** Figure out whether the next topics should be covered or not (maybe as `ADVANCED`):
+* Combinational logic, State machine, Pushdown automation, Turing machine.
+* Markov chain
+* Replication
+* Theory of Probabilities
+* Gradient descent
+
+
+# List of Topics for Software Developer Interview Preparation
 
 This list is intended to cover the CS topics which are usefull or good to know for the Software Engineer technical interview.
 The Essentials are highlighted **in bold**.
@@ -215,10 +225,3 @@ TODO
 
 More broadly, a stable algorithm can be defined as the one which _always_ produces exactly the same output for same input.
 
-## TODO, Misc
-
-* Combinational logic, State machine, Pushdown automation, Turing machine.
-* Markov chain
-* Replication
-* Theory of Probabilities
-* Gradient descent
