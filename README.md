@@ -201,13 +201,19 @@ Key concepts and operations
   
 ## OSI Model
 
-L1: Physical Layer - Electrical and physical specifications of the data connection, defines relationship between device (network card) and physical medium (ethernet cable, for example). Wireless signal specification (such as Wi-Fi frequence) lays down here as well.
-L2: Data Link Layer - Defines protocol to establish and terminate connection between two physically connected devices (for example, network card and switch). It also defines flow control and error detection/correction may be on that level. MAC (media access control) is located on that level. Other protocol examples: ARP, OSPF, Tunnels (L2TP), PPP.
-L3: Network Layer - Transfers variable length data sequences between nodes. Each node have an address and network may route message though intermediate nodes. IP protocol is located on that layer. Other protocol examples: IPv6, ICMP, IPsec.
-L4: Transport Layer - Divides long massage to packets, some transport protocols can keep track of the segments and re-transmit those that fail. TCP and UDP protocols is located on Transport Layer.
-L5: Session Layer - Establishes, manages and terminates connection between applications. Commonly implemented explicitly in application environments.
-L6: Presentation Layer - Converts data to the form that application accepts. As an example it can be serialization of data structures to XML/JSON/protobuf
-L7: Application Layer - Interacts with software applications that implement a communicating component. Examples: HTTP, FTP, DNS, DHCP, NTP, POP, IMAP, SNTP, SSH, Telnet.
+* L1: Physical Layer - Electrical and physical specifications of the data connection, defines relationship between device (network card) and physical medium (ethernet cable, for example). Wireless signal specification (such as Wi-Fi frequence) lays down here as well.
+
+* L2: Data Link Layer - Defines protocol to establish and terminate connection between two physically connected devices (for example, network card and switch). It also defines flow control and error detection/correction may be on that level. MAC (media access control) is located on that level. Other protocol examples: ARP, OSPF, Tunnels (L2TP), PPP.
+
+* L3: Network Layer - Transfers variable length data sequences between nodes. Each node have an address and network may route message though intermediate nodes. IP protocol is located on that layer. Other protocol examples: IPv6, ICMP, IPsec.
+
+* L4: Transport Layer - Divides long massage to packets, some transport protocols can keep track of the segments and re-transmit those that fail. TCP and UDP protocols is located on Transport Layer.
+
+* L5: Session Layer - Establishes, manages and terminates connection between applications. Commonly implemented explicitly in application environments.
+
+* L6: Presentation Layer - Converts data to the form that application accepts. As an example it can be serialization of data structures to XML/JSON/protobuf
+
+* L7: Application Layer - Interacts with software applications that implement a communicating component. Examples: HTTP, FTP, DNS, DHCP, NTP, POP, IMAP, SNTP, SSH, Telnet.
 
 
 ## VOCABULARY
