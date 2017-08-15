@@ -34,14 +34,22 @@ There may be much more topics listed than it's practically achivable to iterate 
 * **[Hash]Set**
   * TODO
 * **Graph**
-  * Adjacency Matrix vs Adjacency List based implementations.
+  * _Adjacency Matrix_ based implementation is space-inefficient but allows `O(1)` access to edges. By contrast, _Adjacency List_ based implementation is compact, but requires `O(n)` time to access edges, which may lead to performance degradation on large number of nodes and/or edges. Dictionary based implementation may be the most efficient space- and time-wise.
   * Directed and Undirected.
 
 ### Algorithms
 
 * Array/list search
 * Array/list(*) sorting
+  * **QuickSort** - `O(n^2)` in worst case, and `O(n log n)` in average case. In implementations where the pivot index is randomly selected, the algorithm is unstable*.
+  * **HeapSort** - `O(n log n)` in worst case.
+  * **Merge sort** - `O(n log n)`, however `O(n)` **additional space** is required.
+  * Insertion, Selection, Bubblesort, and alike are `O(n^2)` in worst and often in average case, and therefore impractical.
+  * 
 * Tree traversal/search
+  * **BFS (breadth first search)**
+  * **DFS (depth first search)**
+  * **Topological sorting**
 * Graph traversal/search
 * Bitwise math ("tricks")
 
@@ -130,3 +138,9 @@ There may be much more topics listed than it's practically achivable to iterate 
 > A Data type provides a set of values from which an expression (i.e. variable, function ...) may take its values.
 
 > The type defines the operations that can be done on the data, the meaning of the data, and the way values of that type can be stored. -- Wikipedia
+
+**(Un)Stable Algorithm**
+
+> A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input unsorted array. -- [GeeksForGeeks](http://www.geeksforgeeks.org/stability-in-sorting-algorithms/)
+
+More broadly, a stable algorithm can be defined as the one which _always_ produces exactly the same output for same input.
