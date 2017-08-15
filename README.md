@@ -1,6 +1,7 @@
 **TODO** Add links to code files for data types, algorithms, problems solved.
 
 **TODO** Figure out whether the next topics should be covered or not (maybe as `ADVANCED`):
+
 * Combinational logic, State machine, Pushdown automation, Turing machine.
 * Markov chain
 * Replication
@@ -87,8 +88,6 @@ There may be much more topics listed than it's practically achivable to iterate 
 
 Key concepts and operations
 
-**Practice**
-
 * Immutability and immutable data structures.
 * Pure functions.
 * Function composition.
@@ -155,12 +154,12 @@ Key concepts and operations
 
 ## Multithreading / Concurrency
 
-  * Optimistic vs pessimistic locking.
-  * Thread parallelism.
-    * TODO: `mutex` vs `semaphore` vs `lock` vs `monitor`.
-  * Task parallelism.
-  * Reactive programming.
-  * TODO `coroutines` vs `tasks` vs `threads` vs `reactive`
+* Optimistic vs pessimistic locking.
+* Thread parallelism.
+  * TODO: `mutex` vs `semaphore` vs `lock` vs `monitor`.
+* Task parallelism.
+* Reactive programming.
+* TODO `coroutines` vs `tasks` vs `threads` vs `reactive`
   TODO
 
 ## Services
@@ -196,9 +195,9 @@ Key concepts and operations
   TODO
 * Development Principles and Approcahes
   * "Waterfall" vs Agile
-  
+
   _Opinion_: Waterfall and Agile are not different in their nature. Thinking otherwise is a delusion. The key difference between these  two mothodologies is the **duration of the sprint**. In Agile sprints are usually 1 to 3 weeks long, in Waterfall they are months or even years.
-  
+
 ## OSI Model
 
 * L1: Physical Layer - Electrical and physical specifications of the data connection, defines relationship between device (network card) and physical medium (ethernet cable, for example). Wireless signal specification (such as Wi-Fi frequence) lays down here as well.
@@ -222,7 +221,7 @@ Key concepts and operations
 
 > A mathematical model for data types, where a data type is defined by its behavior (semantics) from the point of view of a user of the data, specifically in terms of possible values, possible operations on data of this type, and the behavior of these operations.
 
-> This contrasts with data structures, which are concrete representations of data, and are the point of view of an implementer, not a user. -- Wikipedia
+> This contrasts with data structures, which are concrete representations of data, and are the point of view of an implementer, not a user. -- [Wikipedia](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi0rfK67dnVAhUE4mMKHXRoBM8QFggoMAA&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAbstract_data_type&usg=AFQjCNHuRIHbjbVgiNkX9FswBAbI6gMxww)
 
 **Data Type**
 
@@ -230,7 +229,7 @@ Key concepts and operations
 
 > A Data type provides a set of values from which an expression (i.e. variable, function ...) may take its values.
 
-> The type defines the operations that can be done on the data, the meaning of the data, and the way values of that type can be stored. -- Wikipedia
+> The type defines the operations that can be done on the data, the meaning of the data, and the way values of that type can be stored. -- [Wikipedia](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiCg9Cu7dnVAhUQ0WMKHbATD2MQFggoMAA&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FData_type&usg=AFQjCNGJHn6MlB_HKCFto_EbD_w4HYfKaA)
 
 **(Un)Stable Algorithm**
 
