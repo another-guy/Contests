@@ -40,22 +40,43 @@ There may be much more topics listed than it's practically achivable to iterate 
 ### Algorithms
 
 * Array/list search
+  TODO
 * Array/list(*) sorting
   * **QuickSort** - `O(n^2)` in worst case, and `O(n log n)` in average case. In implementations where the pivot index is randomly selected, the algorithm is unstable*.
   * **HeapSort** - `O(n log n)` in worst case.
   * **Merge sort** - `O(n log n)`, however `O(n)` **additional space** is required.
   * Insertion, Selection, Bubblesort, and alike are `O(n^2)` in worst and often in average case, and therefore impractical.
-  * 
+  * More exotic, special case focused sortings include **count sort** and **bucket sorts**.
 * Tree traversal/search
   * **BFS (breadth first search)**
   * **DFS (depth first search)**
   * **Topological sorting**
+  TODO
 * Graph traversal/search
+  TODO
 * Bitwise math ("tricks")
+  TODO
+
+### Functional Programming
+
+Key concepts and operations
+
+**Practice**
+
+* Immutability and immutable data structures.
+* Pure functions.
+* Function composition.
+* Currying.
+* Memoization.
+* Monad.
+* Filter (`filter()`, `Where()`).
+* Map (`map()`, `Select()`) as projection.
+* Reduce (`reduce()`, `fold()`, `Aggregate()`).
 
 ### Strategies
 
 * Divide and conquer
+  * Recursion
 * Greedy algorithms
 * Linear programming
 * Dynamic programming
