@@ -73,11 +73,11 @@ There may be much more topics listed than it's practically achivable to iterate 
 ### Empirical Principles
 
 * Architectural
-  * SOLID
+  * [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) = [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) + [OCP](https://en.wikipedia.org/wiki/Open/closed_principle) + [LSP](https://en.wikipedia.org/wiki/Liskov_substitution_principle) + [ISP](https://en.wikipedia.org/wiki/Interface_segregation_principle) + [DIP](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
 * General engineering
-  * DRY
-  * KISS
-  * YAGNI
+  * [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+  * [KISS](https://en.wikipedia.org/wiki/KISS_principle)
+  * [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
 
 ### Design Patterns
 
