@@ -153,8 +153,30 @@ Key concepts and operations
   * TODO `coroutines` vs `tasks` vs `threads` vs `reactive`
   TODO
 
-## OTHER
+## Services
 
+* REST - REpresentational State Transfer.
+  * Client-server.
+    * Separation of concerns.
+    * Client and server evolve independently.
+    * Therefore, simplified server.
+  * Statelessness.
+    * No client context stored on server.
+    * Each client request has all the information for the server to be processed.
+    * Therefore, many services can be used in parallel, without need of shared/synchronized state.
+    * State (including _session state_) is/can be stored in a database.
+  * Cacheability.
+    * Clients and intermediaries may cache responses, therefore the responses must define themselves as cacheable or not.
+    * This partially or completely eliminates some client-server interactions which further improving scalability and performance.
+  * Layered system.
+    * The client is unable to distinguish the server from the intermediaries.
+  * Uniform interface.
+    * HTTP Verbs describe Actions upon resources.
+    * Routes identify resources in requests (via URIs).
+    * Payload is a representation that is used for resource manipulation. I.e. if client has representation of a resource, the client has everything to modify or delete it.
+    * "Metadata" (HTTP Headers) help make messages self-descriptive. The message's information is sufficient for the server to process it.
+    * Hypermedia as the engine of application state (HATEOAS). Responses contain hyperlinks to other actions currently available.
+  * Code on demand.
 * Services and Scaling
   * TODO [CAP Theorem](https://en.wikipedia.org/wiki/CAP_theorem), [PACELC Theorem](https://en.wikipedia.org/wiki/PACELC_theorem).
   * TODO [Fallacies of distributed programming](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)
@@ -166,6 +188,10 @@ Key concepts and operations
   * "Waterfall" vs Agile
   
   _Opinion_: Waterfall and Agile are not different in their nature. Thinking otherwise is a delusion. The key difference between these  two mothodologies is the **duration of the sprint**. In Agile sprints are usually 1 to 3 weeks long, in Waterfall they are months or even years.
+  
+## OSI Model
+
+TODO
 
 ## VOCABULARY
 
@@ -191,7 +217,7 @@ More broadly, a stable algorithm can be defined as the one which _always_ produc
 
 ## TODO, Misc
 
-* State machine
+* Combinational logic, State machine, Pushdown automation, Turing machine.
 * Markov chain
 * Replication
 * Theory of Probabilities
