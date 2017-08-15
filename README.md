@@ -155,8 +155,10 @@ Key concepts and operations
 
 ## OTHER
 
-* Scaling
-  * TODO [CAP Theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+* Services and Scaling
+  * TODO [CAP Theorem](https://en.wikipedia.org/wiki/CAP_theorem), [PACELC Theorem](https://en.wikipedia.org/wiki/PACELC_theorem).
+  * TODO [Fallacies of distributed programming](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)
+  * TODO Fine vs Coarse SOA
   TODO
 * Quality Assurance
   TODO
@@ -186,3 +188,11 @@ Key concepts and operations
 > A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input unsorted array. -- [GeeksForGeeks](http://www.geeksforgeeks.org/stability-in-sorting-algorithms/)
 
 More broadly, a stable algorithm can be defined as the one which _always_ produces exactly the same output for same input.
+
+## TODO, Misc
+
+* State machine
+* Markov chain
+* Replication
+* Theory of Probabilities
+* Gradient descent
