@@ -34,13 +34,13 @@ There may be much more topics listed than it's practically achivable to iterate 
   * Insert/delete at beginning: `O(1)`.
   * Insert/delete at ending: `O(1)` if last element is known; otherwise `O(n)`.
   * Insert/delete at arbitrary position: search time + `O(1)`.
-* **Stack** - ATD that implements a collection of elements with 2 principal operations: `push(element): void` and `pop(): element`. Often described as LIFO (last in, first out).
+* **Stack** - ADT that implements a collection of elements with 2 principal operations: `push(element): void` and `pop(): element`. Often described as LIFO (last in, first out).
   * Array vs Linked list based implementations.
   * Both `push()` and `pop()` take `O(1)` time.
-* **Queue** - ATD that implements a collection of elements with 2 principal operations: `enqueue(element): void` and `dequeue(): element`. Often described as FIFO (first in, first out).
+* **Queue** - ADT that implements a collection of elements with 2 principal operations: `enqueue(element): void` and `dequeue(): element`. Often described as FIFO (first in, first out).
   * `enqueue()`/`dequeue()` takes `O(1)`.
   * Search takes `O(n)`, but it's not necessarily a typical operation.
-* **Tree**
+* **Tree** - ADT that simulates hierarchical tree structure, with a root node and subtrees of children nodes with a parent node.
   * In **Binary Search Tree** both `insert()` and `search()` take `O(log n)`.
   * Balanced Trees:
     * `rotate()` operation is used in `insert()` and `delete()` to enforce the balance invariant.
@@ -48,10 +48,20 @@ There may be much more topics listed than it's practically achivable to iterate 
     * [ADVANCED] **AVL Tree**
     * [ADVANCED] **Priority Queue**
     * [ADVANCED] **Binary Heap**
-* **Trie (Prefix tree)**
-  * TODO
-* **[Hash]Map/Disctionary**
-  * TODO
+* **Trie (Prefix tree)** or prefix tree -- an ordered tree data structure where the keys are usually strings.
+  * Search takes `O(m)` in worst case, where `m` is the length of the key.
+  * "Buckets" may be used in case same key is used with more than one value.
+  * May not be very efficient if data items share long key prefixes.
+* **[Hash]Map/Disctionary** -- a data structure that maps keys to values using a hash function to compute an index of the "bucket" where the value of interest _may_ be found. It's very commonly used for many applications such as caches, sets, object representations, due to the performance benefits.
+  * `.search()`, `.insert()`, and `.delete()` all take `O(1)` in average case and `O(n)` in worst case.
+  * **Hash function**
+    * Guarantees **consistent determenistic** result for the same key.
+    * Is **cheap** for computation.
+    * Has **few collisions** -- clashes in values for different key inputs.
+    * **Perfect hash function** is the one which has no collision for hashes of any pair of keys (assuming, all keys are known ahead of time).
+  * Hashtable **load factor** is defined as the number of elements divided by the number of buckets. With the growth of this metric performance of hashtable degrades. Low load factor may lead to inefficient memory consumption. This metric on it's own is rarely sufficient -- it's always good to know how the elements are _distributed_ across the buckets.
+  * TODO **Open addressing** vs **Chaining**
+
 * **[Hash]Set**
   * TODO
 * **Graph**
