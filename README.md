@@ -2,12 +2,12 @@
 
 **TODO** Figure out whether the next topics should be covered or not (maybe as `ADVANCED`):
 
+* OOP? (Incapsulation, Inheritance, Polymorphism, Abstraction)
 * Combinational logic, State machine, Pushdown automation, Turing machine.
 * Markov chain
 * Replication
 * Theory of Probabilities
 * Gradient descent
-
 
 # List of Topics for Software Developer Interview Preparation
 
@@ -143,11 +143,28 @@ Key concepts and operations
 
 #### GOF - Creational
 
-* Factory
-* Factory method
-* Builder
-* Fluid builder
-* Singleton
+* **Factory Method**
+
+  Abstracts the object creation logic - dynamically selects a type of the object returned and/or hides the concrete type of the object created behind an interface, as well as construction details (such as exact number and order of instructions and parameters).
+
+* **Abstract Factory**
+
+  Provides a unified way for constructing families of objects.
+
+  At run time, object(s) of a specific familiy are produced using a specific concrete factory. However, the concrete factory is often not known since it's selected dynamically and is hidden behind an interface shared by all factories.
+
+* **Builder**
+
+  TODO
+
+* **Fluid Builder**
+  * Simplifies creation of objects that require multiple parameters, thus preventing constructor proliferation, or code duplication. Often uses chaining for setting specific attribute values, succeeded with a build command: `CarBuilder.WithEngine(engine).WithBase(base).Build()`.
+
+* **Prototype/Deep Copy**
+
+  Enables creation of object instances by deep/shallow coping the target object. This is useful when "regular" object instantiation with `new` is costly.
+
+* **Singleton**
 
   Considered an anti-pattern nowadays since:
   1) introduces a globally exposed state available for [undesired] modification;
@@ -156,11 +173,36 @@ Key concepts and operations
 
 #### GOF - Structural
 
-...
+* **Adapter/Wrapper**
+
+  Lets an _adaptee_ class to be used with convenient interface. This is helpful when the source code of the _adaptee_ is not available for modification; or when the consuming code works on higher level of abstraction or uses different terminology. It is often says that _adapter_ translates client's requests into _adaptees_ language.
+
+* **Composite**
+  * ISP: A Composite defines a single interface that is used to organize the hierarchy.
+  * SRP: A Composite may or may not only define the _structure_ of the object. It's better to stay away from any methods that implement any logic that's unrelated to object construction (e.g. traversal, projection, and other should be implemented outside of Composite).
+* **Decorator**
+  * SPR: A Decorator must not add more than one feature to the object decorated.
+* **Proxy**
+* **Bridge**
+  * DIP: Concrete types from two hierarchies are communicating via abstracted interfaces.
+* **Lightweight**
+* **Facade**
+
+  Considered an anti-pattern, since it directly contradicts the SRP. Is okay to use for defining API's entry points which delegate the actual work to a fine-grained sub-interfaces and implementations.
 
 #### GOF - Behavioral
 
-...
+* **Command**
+* **State**
+* **Strategy**
+* **Chain of Responsibility**
+* **Iterator**
+* **Visitor**
+* **Mediator**
+* **Memento**
+* **Observer**
+* **Template Method**
+* **Interpreter**
 
 ## Multithreading / Concurrency
 
