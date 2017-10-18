@@ -88,9 +88,37 @@ There may be much more topics listed than it's practically achivable to iterate 
   * **Topological sorting**.
   * [ADVANCED] **Minimax**.
   * [ADVANCED] **Alpha-beta prunnung**.
-* Graph traversal/search
-  * [ADVANCED] A* search.
-  TODO
+* [ADVANCED] Graphs
+  * Traversal/search:
+    * **BFS -- breadth first search**.
+    * **DFS -- depth first search**.
+    * **A * search**.
+    * **Cycle detection in Directed graphs**.
+    * **Cycle detection in Undirected graphs**.
+    * **Longest path in Directed graph**.
+    * **Topsort -- topological sorting**.
+    * [???] **Bipartite graph check**.
+  * Minimum spanning tree:
+    * **Prim's minimum spanning tree**.
+    * and other.
+  * Shortest path:
+    * **Dijkstra's shortest path algorithm**.
+    * **Floyd Warshall algorithm -- all pairs of shortest path**.
+  * Connectivity:
+    * **Biconnected components**.
+    * **Bridges in a graph**.
+    * **Transitive closure**.
+    * **Finding the number of islands**.
+    * **Eulerian path**.
+    * **Eulerian circuit**.
+  * Complex:
+    * **Graph coloring**.
+    * **Travelling salesman problem**.
+    * **Hamiltonian cycle**.
+    * **Vertex cover**.
+    * **K center problem**.
+  * Maximum flow:
+    * 
 * Bitwise math ("tricks")
   TODO
 
