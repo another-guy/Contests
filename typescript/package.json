@@ -1,0 +1,36 @@
+{
+  "name": "another-guy-contests-ts",
+  "version": "1.0.0",
+  "description": "Various problems solved in TypeScript",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "karma start",
+    "test:single-run": "karma start --single-run",
+    "tslint": "tslint -c ./.config/tslint.json 'src/**/*.ts' -t stylish",
+    "double-check": "npm run test:single-run && npm run tslint"
+  },
+  "keywords": [
+    "algorithms",
+    "data",
+    "structures",
+    "problems",
+    "ctci"
+  ],
+  "author": "Igor Soloydenko",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "karma": "^1.7.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-htmlfile-reporter": "^0.3.5",
+    "karma-mocha": "^1.3.0",
+    "karma-typescript": "^3.0.7",
+    "mocha": "^4.0.1",
+    "puppeteer": "^0.12.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
+  }
+}
