@@ -1,10 +1,10 @@
-function swap<T>(data: T[], index1: number, index2: number): void {
+export function swap<T>(data: T[], index1: number, index2: number): void {
   const temporary = data[index1];
   data[index1] = data[index2];
   data[index2] = temporary;
 }
 
-function partition<T>(data: T[], low: number, high: number, less: (a: T, b: T) => boolean): number {
+export function partition<T>(data: T[], low: number, high: number, less: (a: T, b: T) => boolean): number {
   const pivotIndex = high;
   const pivotValue = data[pivotIndex];
   let insertIndex = low - 1;
@@ -19,7 +19,7 @@ function partition<T>(data: T[], low: number, high: number, less: (a: T, b: T) =
   return newPivotIndex;
 }
 
-function quicksort<T>(data: T[], low: number = 0, high: number = data.length - 1, less: (a: T, b: T) => boolean): void {
+export function quicksort<T>(data: T[], low: number = 0, high: number = data.length - 1, less: (a: T, b: T) => boolean): void {
   if (low < high) {
     const pivotIndex = partition(data, low, high, less);
     quicksort(data, low, pivotIndex - 1, less);
@@ -27,7 +27,7 @@ function quicksort<T>(data: T[], low: number = 0, high: number = data.length - 1
   }
 }
 
-function inPlaceSort<T>(data: T[], less: (a: T, b: T) => boolean): void {
+export function inPlaceSort<T>(data: T[], less: (a: T, b: T) => boolean): void {
   return quicksort(data, 0, data.length - 1, less);
 }
 

@@ -1,8 +1,8 @@
-function normalize(word: string): string {
+export function normalize(word: string): string {
   return word ? word.toLowerCase() : '';
 }
 
-function charCount(word: string): { [_: string]: number} {
+export function charCount(word: string): { [_: string]: number} {
   return word
     .split('')
     .reduce((result, char) => {
@@ -12,10 +12,10 @@ function charCount(word: string): { [_: string]: number} {
         result[char] += 1;
       
       return result;
-    }, {});
+    }, <{ [_: string]: number}>{});
 }
 
-function charCountDoesNotExceed(hostCharCount: { [_: string]: number}, guestCharCount: { [_: string]: number}): boolean {
+export function charCountDoesNotExceed(hostCharCount: { [_: string]: number}, guestCharCount: { [_: string]: number}): boolean {
   return Object
     .keys(guestCharCount)
     .every(char => hostCharCount[char] >= guestCharCount[char]);
@@ -27,7 +27,7 @@ function charCountDoesNotExceed(hostCharCount: { [_: string]: number}, guestChar
  *   complexity: O(n)
  *   memory: O(k + m), where k and m are respectively counts of unique characters in each input word.
  */
-function checkPermutation(hostWord: string, guestWord: string): boolean {
+export function checkPermutation(hostWord: string, guestWord: string): boolean {
   return charCountDoesNotExceed(
     charCount(normalize(hostWord)),
     charCount(normalize(guestWord))

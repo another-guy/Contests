@@ -1,12 +1,12 @@
-class Node<T> { left: Node<T>; right: Node<T>; value: T; }
-class Tree<T> extends Node<T> { }
+export class Node<T> { left: Node<T>; right: Node<T>; value: T; }
+export class Tree<T> extends Node<T> { }
 
-function dfs<T>(tree: Tree<T>): Node<T>[] {
+export function dfs<T>(tree: Tree<T>): Node<T>[] {
   const traverseOrder = [];
   const stack: Node<T>[] = [];
   stack.push(tree);
   while (stack.length > 0) {
-    const currentNode = stack.pop();
+    const currentNode = <Node<T>>stack.pop();
     traverseOrder.push(currentNode);
 
     if (currentNode.right)
@@ -17,7 +17,8 @@ function dfs<T>(tree: Tree<T>): Node<T>[] {
 
   return traverseOrder;
 }
-function bfs<T>(tree: Tree<T>): Node<T>[] {
+
+export function bfs<T>(tree: Tree<T>): Node<T>[] {
   const traverseOrder = [];
   const list: Node<T>[] = [];
   list.push(tree);

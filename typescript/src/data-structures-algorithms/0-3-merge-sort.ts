@@ -1,4 +1,4 @@
-function mergesort<T>(data: T[], less: (a: T, b: T) => boolean): T[] {
+export function mergesort<T>(data: T[], less: (a: T, b: T) => boolean): T[] {
   if (data.length < 2)
     return data;
   const medianIndex = Math.floor((data.length - 1) / 2);  

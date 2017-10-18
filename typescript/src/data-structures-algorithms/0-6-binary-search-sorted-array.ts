@@ -1,4 +1,4 @@
-function contains(data: number[], low: number, high: number, element: number): number {
+export function contains(data: number[], low: number, high: number, element: number): number {
   const subArrayLength = high - low + 1;
   if (subArrayLength < 0)
     throw new Error(`Not supposed to happen. low=${low}, high=${high}`);
@@ -19,7 +19,7 @@ function contains(data: number[], low: number, high: number, element: number): n
   }
 }
 
-const testCase = {
+export const testCase = {
   array: [ 1, 1, 3, 3, 4, 5, 8, 9 ],
   presentElements: [
     { target: 1, index: 0 },
@@ -35,7 +35,7 @@ const testCase = {
     { target: 7, index: -1 }
   ]
 };
-const testArray = testCase.array;
+export const testArray = testCase.array;
 
 testCase
   .presentElements
