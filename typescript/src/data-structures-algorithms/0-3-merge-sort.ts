@@ -1,4 +1,4 @@
-import { Compare, SortableArray } from '../../test/data-structures-algorithms/sorting-env';
+import { Compare, SortableArray } from '../sorting-env';
 
 export function mergesort<T>(data: SortableArray<T>, compare: Compare<T>): SortableArray<T> {
   if (data.length < 2) return data;

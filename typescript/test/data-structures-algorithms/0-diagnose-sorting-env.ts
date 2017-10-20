@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { Comparer, createOrderChecker, Element, isSorted, Order, toElementArray } from './sorting-env';
+import { Comparer, createOrderChecker, Element, isSorted, Order, toElementArray } from '../../src/sorting-env';
 
 describe('Comparer.number', () => {
   [

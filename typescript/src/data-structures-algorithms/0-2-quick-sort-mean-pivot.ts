@@ -1,4 +1,4 @@
-import { Compare, SortableArray, swap } from '../../test/data-structures-algorithms/sorting-env';
+import { Compare, SortableArray, swap } from '../sorting-env';
 
 export function partition<T>(data: SortableArray<T>, low: number, high: number, compare: Compare<T>): number {
   const originalPivotIndex = Math.floor((high + low) / 2);

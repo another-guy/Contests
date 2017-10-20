@@ -1,17 +1,11 @@
 import { expect } from 'chai';
 
 import { quicksort } from '../../src/data-structures-algorithms/0-2-quick-sort-mean-pivot';
-import { Comparer, isSorted, Order, toElementArray } from './sorting-env';
+import { Comparer, isSorted, Order, toElementArray } from '../../src/sorting-env';
+import { testArrays } from './sort-test-arrays';
 
 describe(`quick-mean-pivot`, () => {
-  [
-    [ ],
-    [ 1 ],
-    [ 3, 2, 1 ],
-    [ 2, 2, 1 ],
-    [ 3, 4, 2, 1 ],
-    [ 0, 9, 1, 8, 2, 7, 3, 6, 4, 5 ],
-  ]
+  testArrays
   .map(toElementArray)
   .forEach(array => {
 

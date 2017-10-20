@@ -1,16 +1,11 @@
 import { expect } from 'chai';
 
 import { quicksort } from '../../src/data-structures-algorithms/0-1-quick-sort-simple';
-import { Comparer, isSorted, Order, toElementArray } from './sorting-env';
+import { Comparer, isSorted, Order, toElementArray } from '../../src/sorting-env';
+import { testArrays } from './sort-test-arrays';
 
 describe(`quick-sort-simple`, () => {
-  [
-    [ ],
-    [ 1 ],
-    [ 3, 2, 1 ],
-    [ 2, 2, 1 ],
-    [ 3, 4, 2, 1 ],
-  ]
+  testArrays
   .map(toElementArray)
   .forEach(array => {
 
