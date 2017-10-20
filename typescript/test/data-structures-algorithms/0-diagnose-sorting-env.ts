@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { Compare, Comparer, createOrderChecker, Element, isSorted, Order, OrderCheck } from './sorting-env';
+import { Comparer, createOrderChecker, Element, isSorted, Order, toElementArray } from './sorting-env';
 
 describe('Comparer.number', () => {
   [
@@ -129,9 +129,6 @@ describe('createOrderChecker', () => {
 
 describe('isSorted', () => {
   // ...
-  const toElementArray =
-    (originalArray: number[]): Element<number>[] =>
-      originalArray.map(numericKey => ({ key: numericKey, value: ''}));
 
   const ascending = toElementArray([-2, -1, 0, 1, 2]);
   const nonDescending = toElementArray([-2, -2, -1, -1, 0, 0, 1, 1, 2, 2]);

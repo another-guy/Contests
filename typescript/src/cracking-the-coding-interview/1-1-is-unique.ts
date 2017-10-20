@@ -45,25 +45,25 @@ function isUnique(word: string): boolean {
   for (let index = 0; index < characters.length - 1; index++)
     if (characters[index] === characters[index + 1])
       return false;
-  
+
   return true;
 }
 
-[
-  [ 'a', true ],
-  [ 'ab', true ],
-  [ 'Aa', true ],
-  [ 'aa', false ],
-  [ 'abc', true ],
-  [ 'aba', false ],
-  [ 'abA', true ]
-]
-  .forEach(testCase => {
-    const [ inputString, expectedResult ] = <[string, boolean]>testCase;
-    const actualResult = isUnique(inputString);
-    if (actualResult === expectedResult) {
-      console.info(inputString, actualResult ? 'unique' : 'not unique');
-    } else {
-      console.error(inputString, actualResult ? 'unique' : 'not unique');
-    }
-  });
+// [
+//   [ 'a', true ],
+//   [ 'ab', true ],
+//   [ 'Aa', true ],
+//   [ 'aa', false ],
+//   [ 'abc', true ],
+//   [ 'aba', false ],
+//   [ 'abA', true ]
+// ]
+//   .forEach(testCase => {
+//     const [ inputString, expectedResult ] = <[string, boolean]>testCase;
+//     const actualResult = isUnique(inputString);
+//     if (actualResult === expectedResult) {
+//       console.info(inputString, actualResult ? 'unique' : 'not unique');
+//     } else {
+//       console.error(inputString, actualResult ? 'unique' : 'not unique');
+//     }
+//   });

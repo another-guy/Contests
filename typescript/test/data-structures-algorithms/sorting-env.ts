@@ -73,3 +73,34 @@ export function isSorted<TKey>(
 
   return true;
 }
+
+/**
+ * Converts T[] into a SortableArray<T>.
+ * @param originalArray Array to translate.
+ */
+export function toElementArray<T>(originalArray: T[]): SortableArray<T> {
+  return originalArray.map(element => ({ key: element, value: ''}));
+}
+
+/**
+ * Generates a random array.
+ * @param elementCount Total number of elements.
+ * @param lowInclusive Lowest allowed value of an element.
+ * @param highInclusive Highest allowed value of an alement.
+ */
+export const generateRandomArray =
+  (elementCount: number, lowInclusive: number, highInclusive: number) =>
+    Array.apply(null, Array(elementCount))
+      .map(() => Math.ceil(- (lowInclusive + 1) + Math.random() * (highInclusive - lowInclusive)));
+
+/**
+ * Swaps two elements in an array by indices (swapping happens in-place).
+ * @param array Array which elements are being swapped.
+ * @param index1 Index of first element to swap.
+ * @param index2 Index of second element to swap.
+ */
+export function swap<T>(array: SortableArray<T>, index1: number, index2: number): void {
+  const temporary = array[index1];
+  array[index1] = array[index2];
+  array[index2] = temporary;
+}

@@ -1,14 +1,15 @@
-export function mergesort<T>(data: T[], less: (a: T, b: T) => boolean): T[] {
-  if (data.length < 2)
-    return data;
-  const medianIndex = Math.floor((data.length - 1) / 2);  
-  let left = data.splice(0, medianIndex + 1);
-  
+import { Compare, SortableArray } from '../../test/data-structures-algorithms/sorting-env';
+
+export function mergesort<T>(data: SortableArray<T>, compare: Compare<T>): SortableArray<T> {
+  if (data.length < 2) return data;
+  const medianIndex = Math.floor((data.length - 1) / 2);
+  const left = data.splice(0, medianIndex + 1);
+
   let result = [];
-  const leftSorted = mergesort(left, less);
-  const rightSorted = mergesort(data, less);
+  const leftSorted = mergesort(left, compare);
+  const rightSorted = mergesort(data, compare);
   while (leftSorted.length > 0 && rightSorted.length > 0) {
-    if (less(leftSorted[0], rightSorted[0])) {
+    if (compare(leftSorted[0], rightSorted[0]) < 0) {
       result.push(leftSorted[0]);
       leftSorted.splice(0, 1);
     } else {
@@ -26,16 +27,3 @@ export function mergesort<T>(data: T[], less: (a: T, b: T) => boolean): T[] {
 
   return result;
 }
-
-[
-  [ [], [] ],
-  [ [ 1 ], [ 1 ] ],
-  [ [ 3, 2, 1 ], [ 1, 2, 3 ] ],
-  [ [ 2, 2, 1 ], [ 1, 2, 2 ] ],
-  [ [ 3, 4, 2, 1 ], [ 1, 2, 3, 4 ] ],
-  [ [ 1, 0, 2, 9, 3, 8, 4, 7, 5, 6 ], [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ] ]
-].forEach(testCase => {
-  let [ inputArray, expectedOutput ] = testCase;
-  const sortedArray = mergesort(inputArray, (a, b) => a < b);
-  console.warn(sortedArray);
-});

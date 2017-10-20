@@ -12,7 +12,7 @@ export function charCount(word: string): { [_: string]: number} {
         result[char] += 1;
       
       return result;
-    }, <{ [_: string]: number}>{});
+    }, {} as { [_: string]: number});
 }
 
 export function charCountDoesNotExceed(hostCharCount: { [_: string]: number}, guestCharCount: { [_: string]: number}): boolean {
@@ -30,16 +30,16 @@ export function charCountDoesNotExceed(hostCharCount: { [_: string]: number}, gu
 export function checkPermutation(hostWord: string, guestWord: string): boolean {
   return charCountDoesNotExceed(
     charCount(normalize(hostWord)),
-    charCount(normalize(guestWord))
+    charCount(normalize(guestWord)),
   );
 }
 
-[
-  ['abracadabra', 'bra'],
-  ['abracadabra', 'braza'],
-  ['abracadabra', 'Bra'],
-  ['abracadabra', 'Braza']
-].forEach(testCase => {
-  const [host, guest] = testCase;
-  console.warn('checkPermutation', host, guest, checkPermutation(host, guest));
-});
+// [
+//   ['abracadabra', 'bra'],
+//   ['abracadabra', 'braza'],
+//   ['abracadabra', 'Bra'],
+//   ['abracadabra', 'Braza']
+// ].forEach(testCase => {
+//   const [host, guest] = testCase;
+//   console.warn('checkPermutation', host, guest, checkPermutation(host, guest));
+// });
