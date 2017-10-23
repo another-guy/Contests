@@ -2,20 +2,20 @@ export function normalize(word: string): string {
   return word ? word.toLowerCase() : '';
 }
 
-export function charCount(word: string): { [_: string]: number} {
+export function charCount(word: string): { [_: string]: number } {
   return word
     .split('')
     .reduce((result, char) => {
-      if (!result[char])
-        result[char] = 1;
-      else
-        result[char] += 1;
-      
+      result[char] = result[char] ? result[char] + 1 : 1;
+
       return result;
-    }, {} as { [_: string]: number});
+    }, {} as { [_: string]: number });
 }
 
-export function charCountDoesNotExceed(hostCharCount: { [_: string]: number}, guestCharCount: { [_: string]: number}): boolean {
+export function charCountDoesNotExceed(
+  hostCharCount: { [_: string]: number },
+  guestCharCount: { [_: string]: number },
+): boolean {
   return Object
     .keys(guestCharCount)
     .every(char => hostCharCount[char] >= guestCharCount[char]);
@@ -33,13 +33,3 @@ export function checkPermutation(hostWord: string, guestWord: string): boolean {
     charCount(normalize(guestWord)),
   );
 }
-
-// [
-//   ['abracadabra', 'bra'],
-//   ['abracadabra', 'braza'],
-//   ['abracadabra', 'Bra'],
-//   ['abracadabra', 'Braza']
-// ].forEach(testCase => {
-//   const [host, guest] = testCase;
-//   console.warn('checkPermutation', host, guest, checkPermutation(host, guest));
-// });
