@@ -9,6 +9,20 @@
 * Theory of Probabilities
 * Gradient descent
 
+# Coding Problems and Solutions from Books and Contests
+
+## Structure
+
+### `python` directory
+
+Is for Python code only.
+
+### `typescript` directory.
+
+Is for TypeScript code only. It is organized in a form of a normal npm module.
+
+Use `npm run test:single-run` to run all unit tests. The code coverage report will be available under `coverage` directory.
+
 # List of Topics for Software Developer Interview Preparation
 
 This list is intended to cover the CS topics which are usefull or good to know for the Software Engineer technical interview.
