@@ -9,7 +9,8 @@ export class Element<TKey> {
 /** Represents an array which elements can be sorted by key. */
 export type SortableArray<TKey> = Element<TKey>[];
 
-/** Function to compare two keys. * @returns A negative number if first operand is "less" than the second;
+/** Function to compare two keys.
+ * @returns A negative number if first operand is "less" than the second;
  * 0 if operands are "equal";
  * or a positive number otherwise.
  */
