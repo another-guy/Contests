@@ -19,7 +19,7 @@ export function isPalindromePermutation(word: string): boolean {
 
   word
     .split('')
-    .filter(chr => chr !== '')
+    .filter(chr => chr && chr !== ' ' && chr !== '')
     .map(chr => chr.toLocaleLowerCase())
     .forEach(chr => totalCount[chr] ? totalCount[chr] += 1 : totalCount[chr] = 1);
 
