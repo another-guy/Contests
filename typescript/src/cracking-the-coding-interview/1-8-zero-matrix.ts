@@ -1,5 +1,3 @@
-declare var Set: any;
-
 /**
  * Problem:
  *   ...
