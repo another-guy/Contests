@@ -1,6 +1,9 @@
 import { expect } from 'chai';
 
-import { compressString } from '../../src/cracking-the-coding-interview/1-6-string-compression';
+import {
+  compressString,
+  compressStringImperative,
+} from '../../src/cracking-the-coding-interview/1-6-string-compression';
 
 describe(`1-6: StringCompression`, () => {
   [
@@ -17,6 +20,10 @@ describe(`1-6: StringCompression`, () => {
 
     it(`Should return ${expectedResult} for '${text}'`, () => {
       expect(compressString(text)).to.equal(expectedResult);
+    });
+
+    it(`[Imperative] Should return ${expectedResult} for '${text}'`, () => {
+      expect(compressStringImperative(text)).to.equal(expectedResult);
     });
   });
 });
