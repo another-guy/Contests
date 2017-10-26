@@ -29,6 +29,10 @@ describe(`1-5: OneAway`, () => {
     { string1: 'xabc', string2: 'xabc', expectedResult: true },
     { string1: 'xa', string2: 'xab', expectedResult: true },
     { string1: 'xa', string2: 'xabc', expectedResult: false },
+
+    { string1: 'xabc', string2: 'xbc', expectedResult: true },
+    { string1: 'xbc', string2: 'xabc', expectedResult: true },
+    { string1: 'xabc', string2: 'xbac', expectedResult: false },
   ].forEach(testCase => {
     const { string1, string2, expectedResult } = testCase;
 
