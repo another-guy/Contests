@@ -11,6 +11,22 @@
  */
 
 export function compressString(text: string): string {
+  const compressedText = text
+    .split('')
+    .reduce((charCounts, char) => {
+      const lastGroup = charCounts.length > 0 ? charCounts[charCounts.length - 1] : { char: '', count: -1 };
+
+      if (lastGroup.char !== char) charCounts.push({ char, count: 1 });
+      else lastGroup.count += 1;
+
+      return charCounts;
+    }, [] as { char: string, count: number }[])
+    .reduce((result, group) => result + `${group.char}${group.count}`, '');
+
+  return compressedText.length < text.length ? compressedText : text;
+}
+
+export function compressStringImperative(text: string): string {
   let compressedText = '';
   let prevChar = null;
   let previousCharCount = 0;
